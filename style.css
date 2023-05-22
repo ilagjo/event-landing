@@ -115,8 +115,8 @@ body {
 }
 
 @media only screen and (min-width: 500px) and (max-width: 965px) {
-  body {
-    font-size: 1em;
+  body, li {
+    font-size: 16px;
   }
   .header h1 {
     font-size: 50px;
@@ -147,7 +147,7 @@ body {
 }
 
 .nav ul {
-  height: 80px;
+  height: 10%;
   list-style: none;
   margin: 0 5%;
   padding: 0;
@@ -155,8 +155,9 @@ body {
 
 .nav ul li {
   color: #fff;
+  font-size: 1rem;
   display: inline-block;
-  height: 80px;
+  height: 100%;
   line-height: 80px;
   list-style: none;
   padding: 0 10px;
@@ -193,22 +194,23 @@ body {
 }
 
 .jumbotron .container {
-  /* display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;*/
   padding: 0 10% 15% 0;
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 .jumbotron .btn {
   margin: 0;
   float: right;
+  font-size: 16px;
 }
 
 .jumbotron h2, .jumbotron p {
   color: #fff;
   text-align: right;
+}
+
+.jumbotron p {
+  font-size: 16px;
 }
 
 .footer {
@@ -224,3 +226,6 @@ body {
   line-height: 80px;
   margin: auto 5%;
 }
+
+
+

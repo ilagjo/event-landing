@@ -4,24 +4,40 @@ body {
   padding: 0;
 }
 
-body {
+body,
+.btn {
   font-family: "Roboto", sans-serif;
-  font-weight: 100;
-  font-size: 1em;
+  font-weight: 300;
+  color: #fff;
+}
+
+.event-data #countdown,
+.btn,
+.nav ul li,
+.main p,
+.jumbotron .container p {
+  font-size: 1.2rem;
+}
+
+.main * {
+  color: #000;
+}
+
+.main p:first-of-type {
+  margin-top: 10%;
 }
 
 .header {
   background: linear-gradient(rgba(16, 11, 62, 0.4), rgba(16, 11, 62, 0.9)),
-    url(./assets/images/bg-top.jpg) no-repeat center center;
+    url(./assets/images/bg-top.jpg) no-repeat center;
   background-size: cover;
-  position: relative;
   height: 800px;
   text-align: center;
 }
 
 .header .container {
   position: relative;
-  top: 150px;
+  top: 130px;
   margin: 0 auto;
 }
 
@@ -38,16 +54,16 @@ body {
 }
 
 .event-data #countdown {
-  color: #fff;
   font-weight: 400;
-  font-size: 1em;
   margin-top: 2rem;
-  text-transform: uppercase;
 }
 
 .event-data h2 {
   color: #117bff;
-  font-weight: 400;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 3px;
+  text-shadow: #000 1px 1px 1px;
 }
 
 .event-data ul {
@@ -56,13 +72,11 @@ body {
   justify-content: space-around;
   align-items: center;
   list-style: none;
-  padding: 0;
 }
 
 .event-data ul li {
-  margin: auto 15px;
+  margin-right: 2em;
   font-weight: 400;
-  color: #fff;
 }
 
 .event-data ul li i {
@@ -70,18 +84,18 @@ body {
   margin-right: 10px;
 }
 
-.header h1 {
-  color: #fff;
-  line-height: 100px;
-  font-size: 50px;
-  margin-top: 0;
-  margin-bottom: 80px;
+.event-data #countdown,
+.header h1,
+.header p {
   text-transform: uppercase;
 }
 
-#mytext {
+.header h1 {
+  line-height: 100px;
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 45px;
   text-align: center;
-  opacity: 1;
 }
 
 #typedText1,
@@ -89,14 +103,7 @@ body {
   overflow: hidden;
   white-space: nowrap;
   letter-spacing: 0.15em;
-}
-
-#typedText1 {
   animation: typing 3.5s steps(40, end);
-}
-
-#typedText2 {
-  animation: typing 4.5s steps(40, end);
 }
 
 @keyframes typing {
@@ -108,60 +115,40 @@ body {
   }
 }
 
-@media (min-width: 965px) {
-  .header h1 {
-    font-size: 60px;
-  }
-}
-
-@media only screen and (min-width: 500px) and (max-width: 965px) {
-  body, li {
-    font-size: 16px;
-  }
-  .header h1 {
-    font-size: 50px;
-    line-height: 64px;
-  }
-}
-
 .header p {
-  color: #fff;
   font-weight: 500;
   letter-spacing: 8px;
   margin-bottom: 40px;
-  margin-top: 0;
-  text-transform: uppercase;
+}
+
+.btn,
+.nav,
+.footer {
+  background-color: #000;
 }
 
 .btn {
-  color: #fff;
-  background-color: #000;
   padding: 10px 40px;
   text-decoration: none;
   transition: background-color 0.5s;
 }
 
-.nav {
-  background: #000;
+.nav,
+.footer {
   height: 80px;
 }
 
 .nav ul {
-  height: 10%;
   list-style: none;
-  margin: 0 5%;
-  padding: 0;
+  margin: 0 5% 0 0;
 }
 
 .nav ul li {
-  color: #fff;
-  font-size: 1rem;
   display: inline-block;
   height: 100%;
   line-height: 80px;
   list-style: none;
-  padding: 0 10px;
-  transition: background-color 0.5s;
+  padding: 0 1em;
 }
 
 .btn:hover,
@@ -175,54 +162,140 @@ body {
   margin: 8% 5%;
 }
 
+.main {
+  width: 80%;
+  margin: auto;
+}
+
+.main .container h2,
+.jumbotron h2 {
+  font-size: 2rem;
+}
+
 .main img {
-  height: 200px;
-  width: 300px;
-  border-radius: 100px;
+  height: 240px;
+  width: 320px;
+  border-radius: 150px;
   float: left;
   margin: 50px 80px 50px 0;
 }
 
-.jumbotron {
+.main p {
+  line-height: 1.8rem;
+}
+
+.jumbotron,
+.jumbotron .container {
   display: flex;
-  justify-content: flex-end;
   align-items: flex-end;
+}
+
+.jumbotron {
+  justify-content: flex-end;
   background: linear-gradient(rgba(16, 11, 62, 0.4), rgba(16, 11, 62, 1)),
-    url(./assets/images/bg-bottom.jpg) no-repeat center center;
+    url(./assets/images/bg-bottom.jpg) no-repeat center;
   background-size: cover;
   height: 600px;
 }
 
 .jumbotron .container {
-  padding: 0 10% 15% 0;
-  font-size: 16px;
+  flex-direction: column;
+  padding: 0 10% 10% 0;
 }
 
-.jumbotron .btn {
-  margin: 0;
-  float: right;
-  font-size: 16px;
-}
-
-.jumbotron h2, .jumbotron p {
-  color: #fff;
+.jumbotron .container p {
+  
+  line-height: 2rem;
   text-align: right;
 }
 
-.jumbotron p {
-  font-size: 16px;
-}
-
 .footer {
-  background: #000;
-  height: 80px;
   padding: 25px;
 }
 
 .footer p {
-  color: #fff;
   font-size: 1em;
-  height: 80px;
   line-height: 80px;
-  margin: auto 5%;
+  margin: 0 5%;
+}
+
+@media only screen and (min-width: 390.1px) and (max-width: 820px) {
+  body {
+    overflow: auto;
+  }
+  .main .container {
+    margin: 20% 0;
+  }
+  .main .img-container {
+  float: right;
+  }
+
+  .main img {
+    margin: 0 0 0 5px;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 390px) {
+  body {
+    overflow: auto;
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .header > * {
+    text-shadow: #000 1px 1px;
+  }
+  
+  .event-data {
+    padding-bottom: 80px;
+     background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.8),
+      rgb(31, 145, 163, 0)
+    );
+    border-radius: 0 0 50% 50%;
+
+  }
+
+  #countdown {
+    color: black;
+    font-weight: 700;
+  }
+
+  .header .container {
+    position: relative;
+    top: 60px;
+    margin: 0 auto;
+  }
+
+  .header p {
+    font-size: 1.5rem;
+  }
+
+  #myText {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+
+  .event-data #countdown,
+  .btn,
+  .main p,
+  .jumbotron .container p {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  .nav ul li {
+    font-size: 1.91rem;
+    font-weight: 400;
+  }
+
+  .main .container h2,
+  .jumbotron h2 {
+    font-size: 2.9rem;
+  }
+
+   .footer p {
+    font-size: 1.5rem;
+  }
 }
